@@ -17,7 +17,7 @@
                         {% endif %}
                     </div>
                 </div>
-                <input type="text" value="{{item.text}}" class="form-control">
+                <input type="text" value="{{item.text}}" class="form-control" name="t{{item.id}}">
             </div>
             {% endfor %}
         <button type="submit" name="new_item" value="new_item">Add Item</button>
