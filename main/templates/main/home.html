@@ -1,0 +1,15 @@
+{% extends "main/base.html" %}
+
+{% block title %}
+Todo Lists
+{% endblock %}
+
+{% block content %}
+
+    {% for td in user.todolist.all %}
+        <div class="input-group-text" onclick="window.location.href=`/{{td.id}}`">
+            <p class="text-center mx-auto"> <a href="/{{td.id}}"> {{td.name}} </a></p>
+        </div>
+    {% endfor %}
+
+{% endblock %}
