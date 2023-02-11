@@ -16,5 +16,4 @@ RUN python manage.py migrate
 RUN echo DJANGO_SECRET=$(python3 -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())') >> .env
 
 EXPOSE 80
-STOPSIGNAL SIGTERM
 CMD ["/app/start-server.sh"]
